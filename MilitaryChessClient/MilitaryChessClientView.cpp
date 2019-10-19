@@ -58,6 +58,7 @@ void CMilitaryChessClientView::OnDraw(CDC* /*pDC*/)
 		return;
 
 	// TODO:  在此处为本机数据添加绘制代码
+
 }
 
 

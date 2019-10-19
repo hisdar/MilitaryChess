@@ -14,4 +14,50 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\chess\chess.board.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\chess\chess.piece.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\chess\chess.position.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\chess\chess.rule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\chess\chess.station.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\chess\chess.station.link.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\position.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\chess\chess.board.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\chess\chess.piece.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\chess\chess.position.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\chess\chess.rule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\chess\chess.station.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\chess\chess.station.link.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\position.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
