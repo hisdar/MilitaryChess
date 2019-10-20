@@ -75,5 +75,11 @@ namespace cn
 		{
 			mY = y;
 		}
+
+		void Position::setPosition(int x, int y)
+		{
+			mX = x;
+			mY = y;
+		}
 	}
 }

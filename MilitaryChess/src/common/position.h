@@ -22,6 +22,7 @@ namespace cn
 
 			void setX(int x);
 			void setY(int y);
+			void setPosition(int x, int y);
 
 		protected:
 			int mX;
