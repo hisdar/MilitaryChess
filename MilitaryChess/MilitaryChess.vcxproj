@@ -64,6 +64,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\common\socket.cpp" />
+    <ClCompile Include="src\common\server.socket.cpp" />
     <ClCompile Include="src\chess\chess.board.cpp" />
     <ClCompile Include="src\chess\chess.piece.cpp" />
     <ClCompile Include="src\chess\chess.position.cpp" />
@@ -71,8 +73,11 @@
     <ClCompile Include="src\chess\chess.station.cpp" />
     <ClCompile Include="src\chess\chess.station.link.cpp" />
     <ClCompile Include="src\common\position.cpp" />
+    <ClCompile Include="src\platform\windows\WindowsSocket.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\common\socket.h" />
+    <ClInclude Include="src\common\server.socket.h" />
     <ClInclude Include="src\chess\chess.board.h" />
     <ClInclude Include="src\chess\chess.piece.h" />
     <ClInclude Include="src\chess\chess.position.h" />
@@ -80,6 +85,7 @@
     <ClInclude Include="src\chess\chess.station.h" />
     <ClInclude Include="src\chess\chess.station.link.h" />
     <ClInclude Include="src\common\position.h" />
+    <ClInclude Include="src\platform\windows\WindowsSocket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
