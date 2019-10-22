@@ -1,18 +1,18 @@
 #ifndef _WINDOWS_SOCKET_H_
 #define _WINDOWS_SOCKET_H_
 
-#include "../../common/socket.h"
+#include "../../common/socket.interface.h"
 
 namespace cn
 {
 	namespace hisdar
 	{
 		class WindowsSocket :
-			public Socket
+			public SocketInterface
 		{
 		public:
 			WindowsSocket();
-			~WindowsSocket();
+			virtual ~WindowsSocket();
 
 			virtual int connect(const char *pAddr, int port);
 			virtual int close();

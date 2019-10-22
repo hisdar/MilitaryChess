@@ -36,13 +36,16 @@
     <ClCompile Include="src\common\position.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\common\server.socket.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="src\common\socket.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="src\platform\windows\WindowsSocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\socket.interface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\server.socket.interface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\windows\windows.server.socket.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,13 +71,19 @@
     <ClInclude Include="src\common\position.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\common\server.socket.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\common\socket.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="src\platform\windows\WindowsSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\socket.interface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\server.socket.interface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\windows\windows.server.socket.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

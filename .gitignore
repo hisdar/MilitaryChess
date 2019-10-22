@@ -1,5 +1,6 @@
 ipch/*
 *.sdf
+*.opensdf
 MilitaryChess/Debug
 MilitaryChessClient/Debug
 MilitaryChessServer/Debug
