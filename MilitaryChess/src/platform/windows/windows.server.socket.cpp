@@ -1,4 +1,4 @@
-#include <winsock2.h>
+#include <stdio.h>
 #include "windows.server.socket.h"
 
 namespace cn
@@ -11,15 +11,15 @@ namespace cn
 			WSADATA wsaData;
 			if (WSAStartup(sockVersion, &wsaData) != 0)
 			{
-				return 0;
+				return;
 			}
 
 			//创建套接字  
-			SOCKET slisten = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+			slisten = ::socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 			if (slisten == INVALID_SOCKET)
 			{
 				printf("socket error !");
-				return 0;
+				return;
 			}
 		}
 
@@ -27,14 +27,15 @@ namespace cn
 		{
 		}
 
-		int WindowsServerSocket::bind()
+		int WindowsServerSocket::bind(int port)
 		{
 			//绑定IP和端口  
 			sockaddr_in sin;
 			sin.sin_family = AF_INET;
-			sin.sin_port = htons(8888);
+			sin.sin_port = htons(port);
 			sin.sin_addr.S_un.S_addr = INADDR_ANY;
-			if (bind(slisten, (LPSOCKADDR)&sin, sizeof(sin)) == SOCKET_ERROR)
+			int ret = ::bind(slisten, (LPSOCKADDR)&sin, sizeof(sin));
+			if (ret == SOCKET_ERROR)
 			{
 				printf("bind error !");
 			}
@@ -42,15 +43,16 @@ namespace cn
 
 		int WindowsServerSocket::listen()
 		{
-			//开始监听  
-			if (listen(slisten, 5) == SOCKET_ERROR)
+			//开始监听
+			int ret = ::listen(slisten, 5);
+			if (ret == SOCKET_ERROR)
 			{
 				printf("listen error !");
 				return 0;
 			}
 		}
 
-		int WindowsServerSocket::acceot()
+		int WindowsServerSocket::accept()
 		{
 			//循环接收数据  
 			SOCKET sClient;
@@ -60,7 +62,7 @@ namespace cn
 			while (true)
 			{
 				printf("等待连接...\n");
-				sClient = accept(slisten, (SOCKADDR *)&remoteAddr, &nAddrlen);
+				sClient = ::accept(slisten, (SOCKADDR *)&remoteAddr, &nAddrlen);
 				if (sClient == INVALID_SOCKET)
 				{
 					printf("accept error !");

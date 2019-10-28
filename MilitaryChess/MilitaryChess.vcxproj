@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\common\log.cpp" />
     <ClCompile Include="src\chess\chess.board.cpp" />
     <ClCompile Include="src\chess\chess.piece.cpp" />
     <ClCompile Include="src\chess\chess.position.cpp" />
@@ -77,6 +78,7 @@
     <ClCompile Include="src\platform\windows\windows.server.socket.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\common\log.h" />
     <ClInclude Include="src\chess\chess.board.h" />
     <ClInclude Include="src\chess\chess.piece.h" />
     <ClInclude Include="src\chess\chess.position.h" />

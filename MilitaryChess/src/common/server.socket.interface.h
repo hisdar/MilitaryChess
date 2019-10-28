@@ -12,9 +12,9 @@ namespace cn
 			ServerSocketInterface();
 			virtual ~ServerSocketInterface();
 
-			virtual int bind() = 0;
+			virtual int bind(int port) = 0;
 			virtual int listen() = 0;
-			virtual int acceot() = 0;
+			virtual int accept() = 0;
 			virtual int read() = 0;
 			virtual int write() = 0;
 			virtual int close() = 0;

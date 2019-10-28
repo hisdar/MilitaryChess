@@ -48,6 +48,9 @@
     <ClCompile Include="src\platform\windows\windows.server.socket.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\common\log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\chess\chess.board.h">
@@ -84,6 +87,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\platform\windows\windows.server.socket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\log.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
