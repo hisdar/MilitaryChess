@@ -2,15 +2,15 @@
 #define _WINDOWS_SERVER_SOCKET_H_
 
 #include <winsock2.h>
-#include "../../common/common.h"
-#include "../../common/server.socket.interface.h"
+#include <common/common.h>
+#include <common/server.socket.interface.h>
 
 namespace cn
 {
 	namespace hisdar
 	{
 
-		class WindowsServerSocket :
+		class DLL_API WindowsServerSocket :
 			public ServerSocketInterface
 		{
 		public:
@@ -25,7 +25,8 @@ namespace cn
 			virtual int close();
 
 		private:
-			SOCKET slisten;
+			bool   mIsInitSuccess;
+			SOCKET mSocket;
 		};
 
 	}

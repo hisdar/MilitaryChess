@@ -1,12 +1,12 @@
-#ifndef _SERVER_SOCKET_H_
-#define _SERVER_SOCKET_H_
+#ifndef _SERVER_SOCKET_INTERFACE_H_
+#define _SERVER_SOCKET_INTERFACE_H_
 #include "common.h"
 
 namespace cn
 {
 	namespace hisdar
 	{
-		class ServerSocketInterface
+		class DLL_API ServerSocketInterface
 		{
 		public:
 			ServerSocketInterface();

@@ -36,9 +36,6 @@
     <ClCompile Include="src\common\position.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\platform\windows\WindowsSocket.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="src\common\socket.interface.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -49,6 +46,18 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\common\log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\windows\windows.socket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,9 +83,6 @@
     <ClInclude Include="src\common\position.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\platform\windows\WindowsSocket.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="src\common\socket.interface.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -90,6 +96,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\common\log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\windows\windows.socket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\socket.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -13,16 +13,17 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0600E04E-5CF6-43F4-989A-86715D77942F}</ProjectGuid>
     <RootNamespace>MilitaryChess</RootNamespace>
+    <RootNamespace>dll</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -38,15 +39,21 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.dll</TargetExt>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -64,6 +71,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dll.cpp" />
+    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="src\common\log.cpp" />
     <ClCompile Include="src\chess\chess.board.cpp" />
     <ClCompile Include="src\chess\chess.piece.cpp" />
@@ -74,8 +83,9 @@
     <ClCompile Include="src\common\position.cpp" />
     <ClCompile Include="src\common\server.socket.interface.cpp" />
     <ClCompile Include="src\common\socket.interface.cpp" />
-    <ClCompile Include="src\platform\windows\WindowsSocket.cpp" />
+    <ClCompile Include="src\platform\windows\windows.socket.cpp" />
     <ClCompile Include="src\platform\windows\windows.server.socket.cpp" />
+    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common\log.h" />
@@ -88,9 +98,12 @@
     <ClInclude Include="src\common\common.h" />
     <ClInclude Include="src\common\position.h" />
     <ClInclude Include="src\common\server.socket.interface.h" />
+    <ClInclude Include="src\common\socket.h" />
     <ClInclude Include="src\common\socket.interface.h" />
-    <ClInclude Include="src\platform\windows\WindowsSocket.h" />
+    <ClInclude Include="src\platform\windows\windows.socket.h" />
     <ClInclude Include="src\platform\windows\windows.server.socket.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

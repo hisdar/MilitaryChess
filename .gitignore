@@ -4,4 +4,5 @@ ipch/*
 MilitaryChess/Debug
 MilitaryChessClient/Debug
 MilitaryChessServer/Debug
-
+Debug
+MilitaryChessClient/MilitaryChessClient.vcxproj.user

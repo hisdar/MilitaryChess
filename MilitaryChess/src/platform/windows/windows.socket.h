@@ -1,14 +1,13 @@
 #ifndef _WINDOWS_SOCKET_H_
 #define _WINDOWS_SOCKET_H_
 
-#include "../../common/socket.interface.h"
+#include <common/socket.interface.h>
 
 namespace cn
 {
 	namespace hisdar
 	{
-		class WindowsSocket :
-			public SocketInterface
+		class DLL_API WindowsSocket : public SocketInterface
 		{
 		public:
 			WindowsSocket();
